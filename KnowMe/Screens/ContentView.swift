@@ -9,10 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var image = UIImage()
-    @State private var source: UIImagePickerController.SourceType = .photoLibrary
+
     
-    @State private var showSheet = false
+    @State private var showingFirst = false
+    @State private var showingSecond = false
+
+    
     
     var body: some View {
         ZStack {
@@ -53,26 +55,26 @@ struct ContentView: View {
                     
                     
                     
-                    Button(text: "Realtime Scan")
+                    CustomButton(text: "Realtime Scan")
                         .padding(30)
                         .onTapGesture {
-                            showSheet = true
-                            source = .camera
-                        }
-                        .sheet(isPresented:$showSheet) {
-                            ImagePicker(sourceType:$source, selectedImage: $image)
-                        }
-                    
-                    
-                    Button(text: "Static Scan")
-                        .onTapGesture {
-                            showSheet = true
-                            source = .camera
+                            showingFirst = true
                         
                         }
-                        .sheet(isPresented:$showSheet) {
+                        .sheet(isPresented:$showingFirst) {
+                            ScannerView()
+                        }
+                    
+                    
+                    CustomButton(text: "Static Scan")
+                        .onTapGesture {
+                            showingSecond = true
+                           
+                        
+                        }
+                        .sheet(isPresented:$showingSecond) {
                           
-                            ImagePicker(sourceType:$source, selectedImage: $image)
+                            StaticScanVIew()
                         }
                 }
             }

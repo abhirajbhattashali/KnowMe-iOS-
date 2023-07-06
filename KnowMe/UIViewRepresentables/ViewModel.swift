@@ -13,4 +13,6 @@ class ViewModel:ObservableObject{
     @Published var image:UIImage?
     @Published var showPicker:UIImage?
     
+  
+    
 }

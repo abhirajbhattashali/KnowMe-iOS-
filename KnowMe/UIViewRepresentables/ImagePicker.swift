@@ -7,17 +7,22 @@
 
 import UIKit
 import SwiftUI
+import CoreML
+import Vision
+
 
 struct ImagePicker: UIViewControllerRepresentable {
+   
     @Environment(\.presentationMode) private var presentationMode
-    @Binding var sourceType: UIImagePickerController.SourceType
     @Binding var selectedImage: UIImage
+    @Binding var objectIdentifier:String
+    
 
     func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePicker>) -> UIImagePickerController {
 
         let imagePicker = UIImagePickerController()
         imagePicker.allowsEditing = true
-        imagePicker.sourceType = sourceType
+        imagePicker.sourceType = .camera
         imagePicker.delegate = context.coordinator
 
         return imagePicker
@@ -43,9 +48,39 @@ struct ImagePicker: UIViewControllerRepresentable {
 
             if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
                 self.parent.selectedImage = image
+                
+                guard let convertedCIImage = CIImage(image: image) else{
+                    fatalError("Could not convert image to CIImage.")
+                }
+                detect(image:convertedCIImage)
             }
 
             parent.presentationMode.wrappedValue.dismiss()
+            
+        }
+        
+        
+        func detect(image:CIImage){
+            guard let model = try? VNCoreMLModel(for: KnowMeImageClassifier().model) else{
+                fatalError("Cannot import model")
+            }
+            
+            let request = VNCoreMLRequest(model: model){(request,error) in
+                print(request.results)
+                guard let classification = request.results?.first as? VNClassificationObservation else{
+                    fatalError("Could not classify flower image.")
+                }
+                self.parent.objectIdentifier = classification.identifier.uppercased()
+                
+            }
+            
+            let handler = VNImageRequestHandler(ciImage:image)
+            do{
+                try handler.perform([request])
+            }
+            catch{
+                print(error)
+            }
         }
 
     }

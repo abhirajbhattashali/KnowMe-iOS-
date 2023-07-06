@@ -8,30 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		6B057ECB29BCC71400986620 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B057ECA29BCC71400986620 /* SplashView.swift */; };
+		6B40E3E82A55BA52000E6B61 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B40E3E72A55BA52000E6B61 /* ScannerView.swift */; };
+		6B40E3F22A55E4F8000E6B61 /* ScanType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B40E3F12A55E4F8000E6B61 /* ScanType.swift */; };
+		6B40E3F62A55EFBA000E6B61 /* arduino.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B40E3F52A55EFBA000E6B61 /* arduino.jpg */; };
 		6B59724C29BA4C28002DD719 /* KnowMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B59724B29BA4C28002DD719 /* KnowMeApp.swift */; };
 		6B59724E29BA4C28002DD719 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B59724D29BA4C28002DD719 /* ContentView.swift */; };
 		6B59725029BA4C29002DD719 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B59724F29BA4C29002DD719 /* Assets.xcassets */; };
 		6B59725329BA4C29002DD719 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B59725229BA4C29002DD719 /* Preview Assets.xcassets */; };
-		6B7B9E0A29F93F4A003DEEC6 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B9E0929F93F4A003DEEC6 /* ScannerView.swift */; };
+		6B7B9E0A29F93F4A003DEEC6 /* ScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B9E0929F93F4A003DEEC6 /* ScannerViewModel.swift */; };
 		6BC97D7C29C4806A00E1D4D1 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC97D7B29C4806A00E1D4D1 /* ViewModel.swift */; };
 		6BC97D8029C4CB8600E1D4D1 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC97D7F29C4CB8600E1D4D1 /* ImagePicker.swift */; };
 		6BC97D8429C4CBCF00E1D4D1 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC97D8329C4CBCF00E1D4D1 /* Button.swift */; };
 		6BD2E87B29C0501E006E1C50 /* KnowMeImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 6BD2E87A29C0501E006E1C50 /* KnowMeImageClassifier.mlmodel */; };
+		6BED202E2A56C759008EF048 /* StaticScanVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BED202D2A56C759008EF048 /* StaticScanVIew.swift */; };
 		6BF9F78C29C5E07A00E50180 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF9F78B29C5E07A00E50180 /* ImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6B057ECA29BCC71400986620 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		6B40E3E72A55BA52000E6B61 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		6B40E3F12A55E4F8000E6B61 /* ScanType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanType.swift; sourceTree = "<group>"; };
+		6B40E3F52A55EFBA000E6B61 /* arduino.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = arduino.jpg; sourceTree = "<group>"; };
 		6B59724829BA4C28002DD719 /* KnowMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnowMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B59724B29BA4C28002DD719 /* KnowMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowMeApp.swift; sourceTree = "<group>"; };
 		6B59724D29BA4C28002DD719 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6B59724F29BA4C29002DD719 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B59725229BA4C29002DD719 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		6B7B9E0929F93F4A003DEEC6 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		6B7B9E0929F93F4A003DEEC6 /* ScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewModel.swift; sourceTree = "<group>"; };
 		6BC97D7B29C4806A00E1D4D1 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		6BC97D7F29C4CB8600E1D4D1 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		6BC97D8329C4CBCF00E1D4D1 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		6BD2E87A29C0501E006E1C50 /* KnowMeImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = KnowMeImageClassifier.mlmodel; sourceTree = "<group>"; };
+		6BED202D2A56C759008EF048 /* StaticScanVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticScanVIew.swift; sourceTree = "<group>"; };
 		6BF9F78B29C5E07A00E50180 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,8 +78,10 @@
 				6BC97D7A29C4802100E1D4D1 /* UIViewRepresentables */,
 				6B59724B29BA4C28002DD719 /* KnowMeApp.swift */,
 				6B59724F29BA4C29002DD719 /* Assets.xcassets */,
+				6B40E3F52A55EFBA000E6B61 /* arduino.jpg */,
 				6B59725129BA4C29002DD719 /* Preview Content */,
 				6BD2E87A29C0501E006E1C50 /* KnowMeImageClassifier.mlmodel */,
+				6B40E3F12A55E4F8000E6B61 /* ScanType.swift */,
 			);
 			path = KnowMe;
 			sourceTree = "<group>";
@@ -89,7 +99,8 @@
 			children = (
 				6BC97D7B29C4806A00E1D4D1 /* ViewModel.swift */,
 				6BC97D7F29C4CB8600E1D4D1 /* ImagePicker.swift */,
-				6B7B9E0929F93F4A003DEEC6 /* ScannerView.swift */,
+				6B7B9E0929F93F4A003DEEC6 /* ScannerViewModel.swift */,
+				6B40E3E72A55BA52000E6B61 /* ScannerView.swift */,
 			);
 			path = UIViewRepresentables;
 			sourceTree = "<group>";
@@ -100,6 +111,7 @@
 				6B59724D29BA4C28002DD719 /* ContentView.swift */,
 				6B057ECA29BCC71400986620 /* SplashView.swift */,
 				6BF9F78B29C5E07A00E50180 /* ImageView.swift */,
+				6BED202D2A56C759008EF048 /* StaticScanVIew.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -172,6 +184,7 @@
 			files = (
 				6B59725329BA4C29002DD719 /* Preview Assets.xcassets in Resources */,
 				6B59725029BA4C29002DD719 /* Assets.xcassets in Resources */,
+				6B40E3F62A55EFBA000E6B61 /* arduino.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,15 +195,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B7B9E0A29F93F4A003DEEC6 /* ScannerView.swift in Sources */,
+				6B7B9E0A29F93F4A003DEEC6 /* ScannerViewModel.swift in Sources */,
 				6BF9F78C29C5E07A00E50180 /* ImageView.swift in Sources */,
+				6BED202E2A56C759008EF048 /* StaticScanVIew.swift in Sources */,
 				6BC97D7C29C4806A00E1D4D1 /* ViewModel.swift in Sources */,
 				6B59724E29BA4C28002DD719 /* ContentView.swift in Sources */,
 				6B59724C29BA4C28002DD719 /* KnowMeApp.swift in Sources */,
 				6BC97D8429C4CBCF00E1D4D1 /* Button.swift in Sources */,
 				6BC97D8029C4CB8600E1D4D1 /* ImagePicker.swift in Sources */,
+				6B40E3F22A55E4F8000E6B61 /* ScanType.swift in Sources */,
 				6BD2E87B29C0501E006E1C50 /* KnowMeImageClassifier.mlmodel in Sources */,
 				6B057ECB29BCC71400986620 /* SplashView.swift in Sources */,
+				6B40E3E82A55BA52000E6B61 /* ScannerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
