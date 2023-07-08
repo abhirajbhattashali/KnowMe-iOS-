@@ -12,12 +12,13 @@ struct CustomButton: View {
     var body: some View {
         
         Text(text)
-            .frame(width:300)
-            .padding(10)
-            .background(LinearGradient(colors: [.purple,.pink,.orange], startPoint: .leading, endPoint: .trailing))
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 50)
+
+        //Color(red: 0.271, green: 0.635, blue: 0.62)
+            .background(LinearGradient(colors: [.indigo,.blue,.purple,.teal],startPoint: .trailing, endPoint: .leading))
             .foregroundColor(.white)
         
-            .clipShape(RoundedRectangle(cornerSize: CGSize(width:20, height: 10)))
+            .clipShape(RoundedRectangle(cornerSize: CGSize(width:100, height: 40)))
          
     }
 }

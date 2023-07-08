@@ -45,19 +45,22 @@ struct ImagePicker: UIViewControllerRepresentable {
         }
 
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-
-            if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-                self.parent.selectedImage = image
-                
-                guard let convertedCIImage = CIImage(image: image) else{
-                    fatalError("Could not convert image to CIImage.")
+            DispatchQueue.main.async {
+                if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+                    self.parent.selectedImage = image
+                    
+                    guard let convertedCIImage = CIImage(image: image) else{
+                        fatalError("Could not convert image to CIImage.")
+                    }
+                    self.detect(image:convertedCIImage)
                 }
-                detect(image:convertedCIImage)
-            }
 
-            parent.presentationMode.wrappedValue.dismiss()
-            
+                self.parent.presentationMode.wrappedValue.dismiss()
+                
+            }
         }
+
+          
         
         
         func detect(image:CIImage){

@@ -18,45 +18,25 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
+            Color(red: 0.133, green: 0.149, blue: 0.161)
+                .ignoresSafeArea()
             VStack {
-                VStack {
+                VStack{
                     Image("welcomeLogo")
                     
                         .renderingMode(.original)
                         .resizable()
-                        .frame(width:240,height: 320,alignment: .leading)
-                        .aspectRatio(contentMode: .fit)
-                    
-                    
-                    
-                    VStack(alignment: .center) {
-                        Text("Unlock the possibilities of Next Tech Lab with our app")
-                            .foregroundColor(.purple)
-                            
-                            .bold()
+                        .frame(width:270,height: 380,alignment: .center)
+                        .aspectRatio(contentMode: .fill)
+                        .padding(.top,60)
                         
-                            .multilineTextAlignment(.center)
-                        
-                            .padding(.vertical,5)
-                          
-                        
-                        Text("Select an option below to proceed with exploring the different things in this lab")
-                            .foregroundColor(.purple)
-                            .bold()
-                        
-                            .multilineTextAlignment(.center)
-                            
-                            .padding()
-                        
-                        
-                    }
-                    .frame(width: UIScreen.main.bounds.width*0.9)
-                    .padding(.vertical,30)
-                    
-                    
+                        .padding(.horizontal,20)
+                    Spacer()
                     
                     CustomButton(text: "Realtime Scan")
-                        .padding(30)
+                        .padding(.horizontal,20)
+                     
+                        
                         .onTapGesture {
                             showingFirst = true
                         
@@ -67,6 +47,8 @@ struct ContentView: View {
                     
                     
                     CustomButton(text: "Static Scan")
+                        .padding(.horizontal,20)
+                        .padding(.vertical)
                         .onTapGesture {
                             showingSecond = true
                            
@@ -77,6 +59,7 @@ struct ContentView: View {
                             StaticScanVIew()
                         }
                 }
+                .padding(.bottom,2)
             }
             
         }

@@ -8,8 +8,8 @@ class ScannerViewController: UIViewController, AVCaptureVideoDataOutputSampleBuf
     
     let identifierLabel: UILabel = {
         let label = UILabel()
-        label.backgroundColor = .white
-        label.textColor = .black
+        label.backgroundColor =  UIColor(red: 0.133, green: 0.149, blue: 0.161,alpha: 1.0)
+        label.textColor = .white
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
